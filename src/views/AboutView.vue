@@ -1,5 +1,16 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+      <DragonBall />
   </div>
 </template>
+
+<script>
+import DragonBall from '../components/bragonbal/ListaDragonball.vue';
+
+export default {
+  name: 'AboutView',
+  components: {
+    DragonBall
+  }
+}
+</script>

@@ -1,0 +1,15 @@
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+nav a{
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
+  }
+    
+nav a.router-link-exact-active {
+  color: #ff8800;
+}
