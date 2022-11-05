@@ -2,14 +2,20 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import AboutView from '../views/AboutView.vue'
+import RickyAndMorty from '../views/RickyAndMorty.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/ricky-and-morty',
-    name: 'Ricky and Morty',
+    path: '/',
+    name: 'home',
     component: HomeView
+  },
+  {
+    path: '/ricky-and-morty',
+    name: 'ricky-and-morty',
+    component: RickyAndMorty
   },
   {
     path: '/dragonball-super',

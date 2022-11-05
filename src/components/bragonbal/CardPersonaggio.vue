@@ -5,9 +5,9 @@
             <img :src="personaggio.imageUrl">
         </div>
         <div class="d-flex flex-column flex-start ps-5">
-            <div>Role - {{ personaggio.role }}</div>
-            <div>Specie - {{ personaggio.specie }}</div>
-            <div>Status - {{ personaggio.status }}</div>
+            <div><span class="category_span">Role</span>: {{ personaggio.role }}</div>
+            <div><span class="category_span">Species</span>: {{ personaggio.specie }}</div>
+            <div><span class="category_span">Status</span>: {{ personaggio.status }}</div>
         </div>
     </div>
 </template>
@@ -21,6 +21,6 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 
 </style>

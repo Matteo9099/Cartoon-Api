@@ -1,5 +1,5 @@
 <template>
-    <section>
+    <section class="bg_cover">
         <div class="banner mb-5">
             <h1 class="title">Ricky And Morty</h1>
             <input class="" type="text" v-model="search" placeholder="Cerca un personaggio..."/>
@@ -15,7 +15,7 @@
                     :personaggio="personaggio"
                 />
             </div>
-            <div v-else>Nessun personaggio trovato</div>
+            <div class="ms_vh" v-else>Nessun personaggio trovato</div>
         </div>
     </section>
 </template>

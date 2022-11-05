@@ -4,6 +4,15 @@ img{
     width: 100%;
     height: 250px;
     object-fit: contain;
-    overflow: hidden;
-
+}
+.title{
+    font-family: fantasy;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+.category_span{
+    color: #ff8800;
+}
+.ms_vh{
+    height: 60vh;
 }

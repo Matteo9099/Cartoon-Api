@@ -1,8 +1,8 @@
 <template>
     <section class="bg_cover">
         <div class="banner mb-5">
-            <h1>DragonBall Super characters</h1>
-            <input type="text" v-model="search" placeholder="Cerca un personaggio" />
+            <h1 class="title">DragonBall Super</h1>
+            <input type="text" v-model="search" placeholder="Cerca un personaggio..." />
         </div>
         <div class="container">
             <ConteggioPersonaggi 
@@ -16,6 +16,10 @@
                 />
             </div>
             <div class="vh-50" v-else>Nessu risultato trovato</div>
+            <div class="d-flex justify-content-center gap-3" v-if="loadingInProgress">
+                <h2 class="text-center"> Caricamento in corso</h2>
+                <div class="spinner-border" role="status"></div>
+            </div>
         </div>
     </section>
 </template>
@@ -31,7 +35,7 @@ export default {
         return{
             search: '',
             listaDragonball: [],
-            loadingInProgress: true,
+            loadingInProgress: false,
             endpoint: 'https://dragon-ball-super-api.herokuapp.com/api/characters',
         }
     },
@@ -41,6 +45,7 @@ export default {
     },
     methods: {
         getPersonaggi(){
+            this.loadingInProgress = true;
             axios.get(this.endpoint)
                 .then((response) => {
                     this.listaDragonball = response.data;
@@ -54,6 +59,7 @@ export default {
     computed: {
         filteredItems() {
             return this.listaDragonball.filter((item) => {
+            // this.loadingInProgress = true;
                 return item.name.toLowerCase().includes(this.search.toLowerCase());
             });
         },
@@ -62,14 +68,5 @@ export default {
 
 </script>
 
-<style scoped>
-.bg_cover{
-    background: #001;
-    color: #fff;
-}
-
-.row{
-    margin: 0;
-}
-
+<style >
 </style>
